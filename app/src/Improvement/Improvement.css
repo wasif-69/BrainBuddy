@@ -1,0 +1,107 @@
+/* 
+ body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  overflow: auto; 
+}   */
+
+/* Container to center flashcard */
+.improvement-container {
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+
+/* Good and bad answers */
+.answer.good {
+  color: #27ae60;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.answer.bad {
+  color: #e74c3c;
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+/* Prediction text */
+.prediction {
+  font-size: 1rem;
+  color: #34495e;
+  margin-bottom: 20px;
+}
+
+/* Flashcard */
+.flashcard {
+  background: linear-gradient(135deg, #4CAF50, #66BB6A); /* green gradient */
+  color: white;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  word-wrap: break-word;
+}
+
+.flashcard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.35);
+}
+
+.flashcard h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.flashcard p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Next button */
+.next-btn {
+  background-color: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.next-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transform: scale(1.05);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  body {
+    padding: 1rem;
+  }
+
+  .flashcard {
+    padding: 1.5rem;
+  }
+
+  .flashcard h2 {
+    font-size: 1.3rem;
+  }
+
+  .flashcard p {
+    font-size: 1rem;
+  }
+
+  .next-btn {
+    padding: 0.6rem 1.2rem;
+  }
+}
