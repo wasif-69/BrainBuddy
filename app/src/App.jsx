@@ -6,6 +6,8 @@ import Input from './inputs/Input'
 import Header from './Header/Header'
 import Three from './Three/Three'
 import SceneComponent from './Three/Three'
+import ThreeScene from './Main/main'
+import BrainBuddyScene from './Main/main'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -13,6 +15,7 @@ function App() {
   return (
     <>
     <Header/>
+    <BrainBuddyScene/>
      <Input/>
      {/* <SceneComponent/> */}
     </>

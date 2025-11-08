@@ -130,6 +130,8 @@ STATIC_URL = 'static/'
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
+    "https://brainbuddy-8cwn.onrender.com",
 ]
+
+# If you want to allow all origins temporarily for testing
 CORS_ALLOW_ALL_ORIGINS = True
