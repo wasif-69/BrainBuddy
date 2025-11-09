@@ -5,14 +5,14 @@ import "./input.css"; // Import the CSS
 export default function Input() {
   const [formdata, setFormdata] = useState({
     Hour_studied: "",
-    Attendence_Percentage: "",
+    Attendance_Percentage: "",
     parent: "",
-    Resourses: "",
-    Extracaricular: false,
+    Resources: "",
+    Extracurricular: false,
     sleep_hour: "",
     Motivational: "",
     Internet: false,
-    Teather: "",
+    Teacher: "",
     physical_activity: "",
     Disability: false,
     gender: "",
@@ -77,8 +77,8 @@ export default function Input() {
               <label>Attendance Percentage</label>
               <input
                 type="number"
-                name="Attendence_Percentage"
-                value={formdata.Attendence_Percentage}
+                name="Attendance_Percentage"
+                value={formdata.Attendance_Percentage}
                 onChange={handleChange}
                 placeholder="Enter attendance %"
                 required
@@ -111,9 +111,9 @@ export default function Input() {
                   <label key={val}>
                     <input
                       type="radio"
-                      name="Resourses"
+                      name="Resources"
                       value={val}
-                      checked={formdata.Resourses === val}
+                      checked={formdata.Resources === val}
                       onChange={handleChange}
                       required
                     />
@@ -126,8 +126,8 @@ export default function Input() {
             <div className="form-group checkbox-group">
               <input
                 type="checkbox"
-                name="Extracaricular"
-                checked={formdata.Extracaricular}
+                name="Extracurricular"
+                checked={formdata.Extracurricular}
                 onChange={handleChange}
               />
               <label>Participates in Extracurricular Activities</label>
@@ -181,9 +181,9 @@ export default function Input() {
                   <label key={val}>
                     <input
                       type="radio"
-                      name="Teather"
+                      name="Teacher"
                       value={val}
-                      checked={formdata.Teather === val}
+                      checked={formdata.Teacher === val}
                       onChange={handleChange}
                       required
                     />

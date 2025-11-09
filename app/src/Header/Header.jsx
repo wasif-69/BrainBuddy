@@ -1,24 +1,44 @@
 import React, { useState } from "react";
 import "./Header.css";
+import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Header = () => {
+  const navigation=useNavigate();
   const [menuOpen, setMenuOpen] = useState(false);
+
+  const toggleMenu = () => setMenuOpen((prev) => !prev);
+  const closeMenu = () => setMenuOpen(false);
+
+  const home=()=>{
+    navigation("/")
+  }
 
   return (
     <header className="header">
+      {/* Logo + Tagline */}
       <div className="logo-container">
-        <span className="logo">🧠 BrainBuddy</span>
+        <span className="logo" onClick={home}>🧠 BrainBuddy</span>
         <span className="tagline">Track your marks & improve your skills 🚀</span>
       </div>
 
+      {/* Navigation Links */}
       <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
-        <a href="#home" className="nav-button" onClick={() => setMenuOpen(false)}>Home</a>
-        <a href="#track" className="nav-button" onClick={() => setMenuOpen(false)}>Track Progress</a>
-        <a href="#recommendations" className="nav-button" onClick={() => setMenuOpen(false)}>Recommendations</a>
-        <a href="#about" className="nav-button" onClick={() => setMenuOpen(false)}>About</a>
+        <Link to="/" className="nav-button" onClick={closeMenu}>Home</Link>
+        <Link href="#track" className="nav-button" onClick={closeMenu}>Track Progress</Link>
+        <Link to="#recommendations" className="nav-button" onClick={closeMenu}>Recommendations</Link>
+        <Link to="/about" className="nav-button" onClick={closeMenu}>
+  About
+</Link>
+
       </nav>
 
-      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+      {/* Hamburger Menu */}
+      <div
+        className={`hamburger ${menuOpen ? "open" : ""}`}
+        onClick={toggleMenu}
+        aria-label="Toggle navigation menu"
+      >
         <span></span>
         <span></span>
         <span></span>

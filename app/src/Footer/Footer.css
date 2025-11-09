@@ -1,0 +1,49 @@
+.footer {
+  background: #2e2e2e; /* dark grey background */
+  color: #e0e0e0;      /* light grey text */
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.team h3,
+.club-info h3 {
+  color: #66BB6A; /* bright green headers */
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.team p,
+.club-info p {
+  margin: 5px 0;
+  color: #cfd8dc; /* soft grey for text */
+}
+
+.icon {
+  color: #66BB6A; /* green icons */
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+a {
+  color: #cfd8dc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #66BB6A;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.9rem;
+  color: #90a4ae; /* lighter grey */
+}
