@@ -33,8 +33,7 @@ export default function Input() {
 
 const handleSubmit = async (e) => {
   e.preventDefault();
-  
-  // Convert string numbers to integers
+
   const payload = {
     ...formdata,
     Hour_studied: parseInt(formdata.Hour_studied || 0),
@@ -50,19 +49,21 @@ const handleSubmit = async (e) => {
   };
 
   try {
-    const response = await fetch("https://brainserver-slq7.onrender.com/myapp/add/", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(payload),
-    });
+    const response = await fetch(
+      "https://brainserver-slq7.onrender.com/myapp/add/",
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }
+    );
 
+    const text = await response.text(); // read body once
     let result;
     try {
-      result = await response.json();
-    } catch (err) {
-      // If server returns HTML (like 400 page), log it
-      console.error("Server returned invalid JSON:", await response.text());
-      console.log(err)
+      result = JSON.parse(text); // try parsing JSON
+    } catch {
+      console.error("Server returned non-JSON response:", text);
       return;
     }
 
