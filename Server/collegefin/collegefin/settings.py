@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-@bwja$@^b6cejyo^)n77dg(1i%ua%b7-%7*_y^3_9*3=8k@vz%
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
-ALLOWED_HOSTS = ['<your-render-service>.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -47,7 +47,6 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
-    'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
