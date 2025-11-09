@@ -31,26 +31,51 @@ export default function Input() {
     }));
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch("https://brainserver-slq7.onrender.com/myapp/add/", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formdata),
-      });
-      const result = await response.json();
-      if (response.ok) {
-        setData(result);
-        console.log(result)
-      } else {
-        console.error("Server error:", result);
-      }
-    } catch (err) {
-      console.error("Network error:", err);
-    }
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  
+  // Convert string numbers to integers
+  const payload = {
+    ...formdata,
+    Hour_studied: parseInt(formdata.Hour_studied || 0),
+    Attendance_Percentage: parseInt(formdata.Attendance_Percentage || 0),
+    sleep_hour: parseInt(formdata.sleep_hour || 0),
+    physical_activity: parseInt(formdata.physical_activity || 0),
+    sub1: parseInt(formdata.sub1 || 0),
+    sub2: parseInt(formdata.sub2 || 0),
+    sub3: parseInt(formdata.sub3 || 0),
+    Extracurricular: !!formdata.Extracurricular,
+    Internet: !!formdata.Internet,
+    Disability: !!formdata.Disability
   };
 
+  try {
+    const response = await fetch("https://brainserver-slq7.onrender.com/myapp/add/", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+
+    let result;
+    try {
+      result = await response.json();
+    } catch (err) {
+      // If server returns HTML (like 400 page), log it
+      console.error("Server returned invalid JSON:", await response.text());
+      console.log(err)
+      return;
+    }
+
+    if (response.ok) {
+      setData(result);
+      console.log(result);
+    } else {
+      console.error("Server error:", result);
+    }
+  } catch (err) {
+    console.error("Network error:", err);
+  }
+};
 
 
   return (
