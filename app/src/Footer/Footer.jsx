@@ -8,10 +8,10 @@ const Footer = () => {
       <div className="footer-content">
         <div className="team">
           <h3>Lead Head</h3>
-          <p>John Doe</p>
-          <p>Jane Smith</p>
-          <p>Michael Lee</p>
-          <p>Sarah Khan</p>
+          <p>Wasif Khalil</p>
+          <p>Khuzaima</p>
+          <p>Ali Alem</p>
+          <p>Mustafain Haider</p>
         </div>
 
         <div className="club-info">
@@ -19,13 +19,13 @@ const Footer = () => {
           <p>Head: Alex Johnson</p>
           <p>
             <FaInstagram className="icon" />{" "}
-            <a href="https://instagram.com/programmingclub" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.canva.com/design/DAGzm9UJgA8/RG4UNpz49WtcPIdQsF1yiQ/edit?utm_content=DAGzm9UJgA8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener noreferrer">
               @programmingclub
             </a>
           </p>
           <p>
             <FaGlobe className="icon" />{" "}
-            <a href="https://programmingclub.com" target="_blank" rel="noopener noreferrer">
+            <a href="http://cci-programming-club.vercel.app" target="_blank" rel="noopener noreferrer">
               www.programmingclub.com
             </a>
           </p>

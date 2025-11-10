@@ -1,49 +1,100 @@
+/* ===================== */
+/* Base Footer Styles */
+/* ===================== */
 .footer {
-  background: #2e2e2e; /* dark grey background */
-  color: #e0e0e0;      /* light grey text */
-  padding: 40px 20px;
+  background: linear-gradient(135deg, #43a047, #66bb6a);
+  color: #fff;
+  padding: 40px 50px 20px 50px;
   font-family: 'Poppins', sans-serif;
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
 }
 
+/* ===================== */
+/* Footer Content Layout */
+/* ===================== */
 .footer-content {
   display: flex;
-  flex-wrap: wrap;
   justify-content: space-between;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
-.team h3,
-.club-info h3 {
-  color: #66BB6A; /* bright green headers */
-  margin-bottom: 15px;
-  font-size: 1.2rem;
+.footer-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+  font-weight: 600;
 }
 
-.team p,
-.club-info p {
+.footer-content p {
   margin: 5px 0;
-  color: #cfd8dc; /* soft grey for text */
+  font-size: 0.95rem;
 }
 
-.icon {
-  color: #66BB6A; /* green icons */
+/* ===================== */
+/* Team Section */
+/* ===================== */
+.team p:first-of-type {
+  font-weight: 500;
+  color: #e0f2f1;
+}
+
+/* ===================== */
+/* Club Info Section */
+/* ===================== */
+.club-info .icon {
   margin-right: 8px;
   vertical-align: middle;
 }
 
-a {
-  color: #cfd8dc;
+.club-info a {
+  color: #fff;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-a:hover {
-  color: #66BB6A;
+.club-info a:hover {
+  color: #e0f2f1;
+  text-decoration: underline;
 }
 
+/* ===================== */
+/* Footer Bottom */
+/* ===================== */
 .footer-bottom {
   text-align: center;
   margin-top: 30px;
   font-size: 0.9rem;
-  color: #90a4ae; /* lighter grey */
+  color: #dcedc8;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  padding-top: 15px;
+}
+
+/* ===================== */
+/* Responsive Styles */
+/* ===================== */
+@media (max-width: 900px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer {
+    padding: 30px 25px 20px 25px;
+  }
+}
+
+@media (max-width: 500px) {
+  .footer-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .footer-content p {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.8rem;
+  }
 }

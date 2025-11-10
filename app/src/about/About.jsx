@@ -20,7 +20,7 @@ const About = () => {
             <p>
               BrainBuddy was crafted by a team of dedicated members from the{" "}
               <a
-                href="https://cciprogrammingclub.example.com"
+                href="http://cci-programming-club.vercel.app"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -46,7 +46,7 @@ const About = () => {
               <em> personalized learning analytics and academic performance tracking</em>.  
               You can read more about the research that shaped BrainBuddy’s foundation{" "}
               <a
-                href="https://example.com/research-paper-link"
+                href="https://www.overleaf.com/read/xhhjgrvqbmzm#bd68b8"
                 target="_blank"
                 rel="noopener noreferrer"
               >

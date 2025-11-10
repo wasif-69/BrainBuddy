@@ -1,0 +1,112 @@
+/* ===================== */
+/* Base Container */
+/* ===================== */
+.check-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 50px;
+  background: #f1f8e9; /* light green background */
+  font-family: 'Poppins', sans-serif;
+  min-height: 80vh;
+  box-sizing: border-box;
+}
+
+/* ===================== */
+/* Inner Content Layout */
+/* ===================== */
+.check-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+/* ===================== */
+/* Text Section */
+/* ===================== */
+.text-section h1 {
+  font-size: 2rem;
+  color: #43a047;
+  margin-bottom: 20px;
+}
+
+.text-section p {
+  font-size: 1.05rem;
+  margin-bottom: 25px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.text-section button {
+  padding: 12px 30px;
+  background: #43a047;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.text-section button:hover {
+  background: #66bb6a;
+  transform: translateY(-2px) scale(1.05);
+}
+
+/* ===================== */
+/* Image Section */
+/* ===================== */
+.image-section img {
+  max-width: 400px;
+  width: 100%;
+  border-radius: 15px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+}
+
+/* ===================== */
+/* Responsive Styles */
+/* ===================== */
+@media (max-width: 900px) {
+  .check-content {
+    flex-direction: column-reverse;
+    text-align: center;
+    gap: 30px;
+  }
+
+  .image-section img {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 500px) {
+  .check-container {
+    padding: 40px 20px;
+  }
+
+  .text-section h1 {
+    font-size: 1.6rem;
+  }
+
+  .text-section p {
+    font-size: 0.95rem;
+  }
+
+  .text-section button {
+    padding: 10px 25px;
+    font-size: 0.95rem;
+  }
+
+  .image-section img {
+    max-width: 250px;
+  }
+}
