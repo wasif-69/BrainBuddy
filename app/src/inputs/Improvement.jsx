@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./CheckImprovement.css";
-import improvementImage from "../assets/improvement.png"; // Add your image in src/assets/
+import improvementImage from "../assets/imp.png"; // Add your image in src/assets/
 
 export default function CheckImprovement() {
   const navigate = useNavigate();

@@ -16,7 +16,7 @@ const Footer = () => {
 
         <div className="club-info">
           <h3>Programming Club</h3>
-          <p>Head: Alex Johnson</p>
+          <p>Head: Sahdab Khan</p>
           <p>
             <FaInstagram className="icon" />{" "}
             <a href="https://www.canva.com/design/DAGzm9UJgA8/RG4UNpz49WtcPIdQsF1yiQ/edit?utm_content=DAGzm9UJgA8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" target="_blank" rel="noopener noreferrer">
@@ -30,9 +30,6 @@ const Footer = () => {
             </a>
           </p>
         </div>
-      </div>
-      <div className="footer-bottom">
-        &copy; {new Date().getFullYear()} BrainBuddy. All Rights Reserved.
       </div>
     </footer>
   );
