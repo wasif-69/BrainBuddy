@@ -19,7 +19,8 @@ function App() {
 
         <Route path='/' element={
           <>
-          <BrainBuddyScene/>
+          <Three/>
+          {/* <BrainBuddyScene/> */}
           <CheckImprovement/>
           </>} />
         <Route path='/about' element={<About/>}/>
