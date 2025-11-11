@@ -51,8 +51,8 @@ export default function Admin() {
                 <th>ID</th>
                 <th>Student Name</th>
                 <th>Gender</th>
-                <th>Actual Grades</th>
-                <th>Predicted Grades</th>
+                <th>Actual Grades BY AI</th>
+                <th>Predicted Grades BY Student</th>
                 <th>Study Hours</th>
                 <th>Class</th>
               </tr>
