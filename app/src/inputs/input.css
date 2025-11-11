@@ -39,6 +39,7 @@ h1 {
 }
 
 .form-group input[type="number"],
+.form-group input[type="text"],
 .form-group select {
   padding: 10px 12px;
   border-radius: 6px;
@@ -48,6 +49,7 @@ h1 {
   transition: border 0.3s, box-shadow 0.3s;
 }
 
+.form-group input[type="text"],
 .form-group input[type="number"]:focus,
 .form-group select:focus {
   border-color: #3498db;

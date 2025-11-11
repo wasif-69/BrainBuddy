@@ -40,6 +40,8 @@ def add_student(request):
             sub1 = int(data.get("sub1", 0))
             sub2 = int(data.get("sub2", 0))
             sub3 = int(data.get("sub3", 0))
+            Student_name=data.get("Student_class")
+            Class=data.get("Class")
 
             # Prepare input for model
             X = np.array([[
@@ -112,7 +114,9 @@ def add_student(request):
                 "Prediction_BY_AI": prediction,
                 "Expected_BY_HIM": avg,
                 "Answer": ans,
-                "Should": plan
+                "Should": plan,
+                "Student_name":Student_name,
+                "Class":Class
             })
 
         except Exception as e:

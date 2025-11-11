@@ -9,6 +9,7 @@ import {  Routes, Route } from "react-router-dom";
 import About from './about/About'
 import Footer from './Footer/Footer'
 import CheckImprovement from './inputs/Improvement'
+import Admin from './admin/admin'
 
 function App() {
 
@@ -26,6 +27,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/exp' element={<SceneComponent/>} />
         <Route path='/input' element={<Input/>} />
+        <Route path='/admin' element={<Admin/>} />
       </Routes>
      <Footer/> 
     </>

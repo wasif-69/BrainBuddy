@@ -1,7 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Improvement.css";
+import { ADDDocument } from "../Firebase/addData";
 
 export default function ImprovementFlashcards({ data }) {
+  
+
+  const ADD=async()=>{
+    
+  }
+  useEffect(()=>{},[])
+
   if (!data) return <p className="no-data">No data to show</p>;
 
   // If "Should" is null or empty, show positive message

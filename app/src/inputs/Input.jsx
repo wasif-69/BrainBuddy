@@ -4,6 +4,8 @@ import "./input.css"; // Import the CSS
 
 export default function Input() {
   const [formdata, setFormdata] = useState({
+    Student_name:"",
+    Class:"",
     Hour_studied: "",
     Attendance_Percentage: "",
     parent: "",
@@ -87,6 +89,31 @@ const handleSubmit = async (e) => {
         <div className="form-container">
           <h1>BrainBuddy - Student Activity Input</h1>
           <form className="student-form" onSubmit={handleSubmit}>
+            
+            <div className="form-group">
+              <label htmlFor="">Student Name</label>
+              <input 
+              type="text"
+              name="Student_name"
+              value={formdata.Student_name}
+              onChange={handleChange}
+              placeholder="Enter You name"
+              required
+               />
+            </div>
+
+            <div className="form-group">
+              <label htmlFor="">Class</label>
+              <input 
+              type="text"
+              name="Class"
+              value={formdata.Class}
+              onChange={handleChange}
+              placeholder="Enter The Section"
+              required
+              />
+            </div>
+
             <div className="form-group">
               <label>Hour Studied</label>
               <input
