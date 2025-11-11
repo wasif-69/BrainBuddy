@@ -21,6 +21,8 @@
   border-collapse: collapse;
   margin-bottom: 40px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  overflow-x: auto;
+  display: block;
 }
 
 .admin-table th,
@@ -28,6 +30,7 @@
   padding: 12px 15px;
   border: 1px solid #ddd;
   text-align: center;
+  min-width: 100px; /* ensures columns are wide enough on small screens */
 }
 
 .admin-table th {
@@ -77,4 +80,38 @@
   font-size: 14px;
   color: #777;
   margin-top: 10px;
+}
+
+/* ===== RESPONSIVE STYLES ===== */
+@media screen and (max-width: 768px) {
+  .admin-table th,
+  .admin-table td {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  .login-container input {
+    width: 200px;
+  }
+
+  .login-container button {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .admin-container {
+    padding: 15px;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 6px 8px;
+    font-size: 12px;
+    min-width: 80px;
+  }
+
+  .login-container input {
+    width: 150px;
+  }
 }
