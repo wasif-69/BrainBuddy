@@ -21,8 +21,6 @@
   border-collapse: collapse;
   margin-bottom: 40px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  overflow-x: auto;
-  display: block;
 }
 
 .admin-table th,
@@ -30,7 +28,6 @@
   padding: 12px 15px;
   border: 1px solid #ddd;
   text-align: center;
-  min-width: 100px; /* ensures columns are wide enough on small screens */
 }
 
 .admin-table th {
@@ -82,12 +79,44 @@
   margin-top: 10px;
 }
 
-/* ===== RESPONSIVE STYLES ===== */
+/* ===== RESPONSIVE CARD LAYOUT ===== */
 @media screen and (max-width: 768px) {
+  .admin-table,
+  .admin-table thead,
+  .admin-table tbody,
   .admin-table th,
+  .admin-table td,
+  .admin-table tr {
+    display: block;
+  }
+
+  .admin-table thead tr {
+    display: none; /* hide header */
+  }
+
+  .admin-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  }
+
   .admin-table td {
-    padding: 8px 10px;
-    font-size: 14px;
+    text-align: left;
+    padding: 8px;
+    border: none;
+    position: relative;
+    padding-left: 50%;
+  }
+
+  .admin-table td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: bold;
+    color: #333;
   }
 
   .login-container input {
@@ -104,14 +133,11 @@
     padding: 15px;
   }
 
-  .admin-table th,
-  .admin-table td {
-    padding: 6px 8px;
-    font-size: 12px;
-    min-width: 80px;
-  }
-
   .login-container input {
     width: 150px;
+  }
+
+  .admin-table td::before {
+    font-size: 13px;
   }
 }
