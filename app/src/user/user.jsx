@@ -13,7 +13,7 @@ export default function User() {
   const accespassword = "cci";
 
   const checkaccess = async () => {
-    if (accesuser.includes(user) && password === accespassword) {
+    if (accesuser.includes(user.trim().toLowerCase()) && password === accespassword) {
       setaccess(true);
       alert("LOGIN SUCCESS");
     } else {
@@ -23,15 +23,17 @@ export default function User() {
 
   useEffect(() => {
     const ReadDocument = async () => {
-      const ref = collection(db, "Student");
-      const snapshot = await getDocs(ref);
-
-      const alldocs = snapshot.docs.map((doc) => ({
-        id: doc.id,
-        ...doc.data(),
-      }));
-
-      setdata(alldocs);
+      try {
+        const ref = collection(db, "Student");
+        const snapshot = await getDocs(ref);
+        const alldocs = snapshot.docs.map((doc) => ({
+          id: doc.id,
+          ...doc.data(),
+        }));
+        setdata(alldocs);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
     };
 
     ReadDocument();
@@ -45,32 +47,38 @@ export default function User() {
         <>
           <h2 className="total-users">Total Users: {data.length}</h2>
 
-          <table className="admin-table">
-            <thead>
-              <tr>
-                <th>ID</th>
-                <th>Student Name</th>
-                <th>Gender</th>
-                <th>Actual Grades BY AI</th>
-                <th>Predicted Grades BY Student</th>
-                <th>Study Hours</th>
-                <th>Class</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.map((doc, index) => (
-                <tr key={doc.id} className={index % 2 === 0 ? "even-row" : "odd-row"}>
-                  <td>{doc.id}</td>
-                  <td>{doc.Student_name || doc.name || "N/A"}</td>
-                  <td>{doc.gender || "N/A"}</td>
-                  <td>{doc.actual_Grades || "N/A"}</td>
-                  <td>{doc.predicted_grades || "N/A"}</td>
-                  <td>{doc.study_hour || "N/A"}</td>
-                  <td>{doc.class_std || "N/A"}</td>
+          {/* ✅ Responsive Scrollable Table Wrapper */}
+          <div className="admin-table-container">
+            <table className="admin-table">
+              <thead>
+                <tr>
+                  <th>ID</th>
+                  <th>Student Name</th>
+                  <th>Gender</th>
+                  <th>Actual Grades BY AI</th>
+                  <th>Predicted Grades BY Student</th>
+                  <th>Study Hours</th>
+                  <th>Class</th>
                 </tr>
-              ))}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                {data.map((doc, index) => (
+                  <tr
+                    key={doc.id}
+                    className={index % 2 === 0 ? "even-row" : "odd-row"}
+                  >
+                    <td>{doc.id}</td>
+                    <td>{doc.Student_name || doc.name || "N/A"}</td>
+                    <td>{doc.gender || "N/A"}</td>
+                    <td>{doc.actual_Grades || "N/A"}</td>
+                    <td>{doc.predicted_grades || "N/A"}</td>
+                    <td>{doc.study_hour || "N/A"}</td>
+                    <td>{doc.class_std || "N/A"}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
         </>
       ) : (
         <div className="login-container">
