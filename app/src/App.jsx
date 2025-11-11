@@ -28,6 +28,10 @@ function App() {
         <Route path='/exp' element={<SceneComponent/>} />
         <Route path='/input' element={<Input/>} />
         <Route path='/survey' element={<User/>} />
+        <Route path='/admin' element={<User/>} />
+        <Route path='/user' element={<User/>} />
+        <Route path='/survey' element={<User/>} />
+        <User/>
       </Routes>
      <Footer/> 
     </>
