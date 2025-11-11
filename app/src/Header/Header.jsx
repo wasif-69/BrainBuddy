@@ -25,7 +25,7 @@ const Header = () => {
       {/* Navigation Links */}
       <nav className={`nav-links ${menuOpen ? "active" : ""}`}>
         <Link to="/" className="nav-button" onClick={closeMenu}>Home</Link>
-        {/* <Link href="#track" className="nav-button" onClick={closeMenu}>Track Progress</Link> */}
+        <Link to="/admin" className="nav-button" onClick={closeMenu}>Admin</Link>
         <Link to="/input" className="nav-button" onClick={closeMenu}>Score Predictor Form!</Link>
         <Link to="/about" className="nav-button" onClick={closeMenu}>
   About

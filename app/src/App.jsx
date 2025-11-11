@@ -33,6 +33,7 @@ function App() {
         <Route path='/survey' element={<User/>} />
         
       </Routes>
+      <User/>
      <Footer/> 
     </>
   )
