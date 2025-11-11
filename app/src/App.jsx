@@ -27,7 +27,7 @@ function App() {
         <Route path='/about' element={<About/>}/>
         <Route path='/exp' element={<SceneComponent/>} />
         <Route path='/input' element={<Input/>} />
-        <Route path='/admin' element={<User/>} />
+        <Route path='/survey' element={<User/>} />
       </Routes>
      <Footer/> 
     </>
