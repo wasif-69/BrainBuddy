@@ -10,7 +10,7 @@ const Footer = () => {
           <h3>Lead Head</h3>
           <p>Wasif Khalil</p>
           <p>Khuzaima</p>
-          <p>Ali Alem</p>
+          <p>Ali Alam</p>
           <p>Mustafain Haider</p>
         </div>
 

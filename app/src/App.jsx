@@ -31,7 +31,7 @@ function App() {
         <Route path='/admin' element={<User/>} />
         <Route path='/user' element={<User/>} />
         <Route path='/survey' element={<User/>} />
-        <User/>
+        
       </Routes>
      <Footer/> 
     </>

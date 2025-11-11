@@ -9,7 +9,7 @@ export default function User() {
   const [password, setpassword] = useState("");
   const [data, setdata] = useState([]);
 
-  const accesuser = ["wasif", "ali", "khuzaima", "mustafan"];
+  const accesuser = ["wasif", "ali", "khuzaima", "mustafain"];
   const accespassword = "cci";
 
   const checkaccess = async () => {
