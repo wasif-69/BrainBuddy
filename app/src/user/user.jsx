@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { collection, getDocs } from "firebase/firestore";
 import { db } from "../Firebase/confiq";
-import "./admin.css"; // Import the CSS file
+import "./user.css"; // Import the CSS file
 
-export default function Admin() {
+export default function User() {
   const [acces, setaccess] = useState(false);
   const [user, setuser] = useState("");
   const [password, setpassword] = useState("");
