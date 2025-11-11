@@ -116,7 +116,9 @@ def add_student(request):
                 "Answer": ans,
                 "Should": plan,
                 "Student_name":Student_name,
-                "Class":Class
+                "Class":Class,
+                "Gender":gender,
+                "Study_hour":Hour_studied
             })
 
         except Exception as e:

@@ -52,7 +52,7 @@ const handleSubmit = async (e) => {
 
   try {
     const response = await fetch(
-      "https://brainserver-slq7.onrender.com/myapp/add/",
+      "http://127.0.0.1:8000/myapp/add/",
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

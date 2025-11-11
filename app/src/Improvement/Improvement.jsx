@@ -6,9 +6,29 @@ export default function ImprovementFlashcards({ data }) {
   
 
   const ADD=async()=>{
-    
+    try {
+      function generateRandomId(length = 8) {
+  // Generates a random alphanumeric string of specified length
+  return Math.random().toString(36).substring(2, 2 + length);
+}
+
+// Example usage
+    const randomId = generateRandomId();
+    const Student_name=data.Student_name
+    const Class=data.Class
+    const Expected_BY_HIM=data.Expected_BY_HIM
+    const Prediction_BY_AI=data.Prediction_BY_AI
+    const Gender=data.Gender
+    const Study_hour=data.Study_hour
+
+    ADDDocument(randomId,Student_name,Class,Expected_BY_HIM,Prediction_BY_AI,Study_hour,Gender)
+    } catch (error) {
+      console.log(error)
+    }
   }
-  useEffect(()=>{},[])
+  useEffect(()=>{
+    ADD();
+  },[])
 
   if (!data) return <p className="no-data">No data to show</p>;
 
@@ -79,7 +99,7 @@ export default function ImprovementFlashcards({ data }) {
     <div className="improvement-container">
       <h1 className="answer bad">⚠️ Needs Improvement</h1>
       <p className="prediction">
-        <p>Predicted Grade: 3{getGrade(data.Prediction_BY_AI)}</p>
+        <span>Predicted Grade: 3{getGrade(data.Prediction_BY_AI)}</span>
 
       </p>
 
