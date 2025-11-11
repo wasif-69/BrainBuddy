@@ -8,7 +8,7 @@ import BrainBuddyScene from './Main/main'
 import {  Routes, Route } from "react-router-dom";
 import About from './about/About'
 import Footer from './Footer/Footer'
-import CheckImprovement from './inputs/Improvement'
+import CheckImprovement from './inputs/Improvement';
 import Admin from './admin/admin'
 
 function App() {
