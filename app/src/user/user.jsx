@@ -95,7 +95,7 @@ export default function User() {
             value={password}
             onChange={(e) => setpassword(e.target.value)}
           />
-          <p>IF NOT A USER ASK TO WASIF</p>
+          <p>ACCESS RESTRICTED CCI</p>
           <button onClick={checkaccess}>CHECK</button>
         </div>
       )}

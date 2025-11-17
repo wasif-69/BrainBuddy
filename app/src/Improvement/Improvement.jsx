@@ -14,7 +14,7 @@ export default function ImprovementFlashcards({ data }) {
 
 // Example usage
     const randomId = generateRandomId();
-    const Student_name=data.Student_name
+    const Student_name=data.Student_name;
     const Class=data.Class
     const Expected_BY_HIM=data.Expected_BY_HIM
     const Prediction_BY_AI=data.Prediction_BY_AI
@@ -30,6 +30,8 @@ export default function ImprovementFlashcards({ data }) {
     ADD();
   },[])
 
+  
+
   if (!data) return <p className="no-data">No data to show</p>;
 
   // If "Should" is null or empty, show positive message
@@ -38,7 +40,7 @@ export default function ImprovementFlashcards({ data }) {
       <div className="improvement-container">
         <h1 className="answer good">🎉 Good work! No improvement needed</h1>
         <p className="prediction">
-          <strong>Predicted by AI:</strong> {data.Prediction_BY_AI.toFixed(2)}
+          <strong>Predicted by AI:</strong> 3{getGrade(data.Prediction_BY_AI)}
         </p>
       </div>
     );
@@ -91,7 +93,7 @@ export default function ImprovementFlashcards({ data }) {
   if (score >= 60) return "C";
   if (score >= 50) return "D";
   if (score >= 40) return "E";
-  return "F";
+  return "U";
 }
 
 
